@@ -16,11 +16,11 @@ shmaddr = shmat(shmid, NULL, 0);
 if (shmaddr == (char*)-1) {
 perror("shmat");
 exit(1);}
-// Write a message to the shared memory segment
+
 printf("Writing to shared memory...\n");
 char* message = "Hello from DVVPCOE,Ahmednagar Server!";
 strncpy(shmaddr, message, SHM_SIZE);
-// Detach the shared memory segment
+
 if (shmdt(shmaddr) == -1) {
 perror("shmdt");
 exit(1);}

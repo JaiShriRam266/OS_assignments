@@ -11,7 +11,7 @@ scanf("%d", &requests[i]);
 }
 printf("Enter the initial head position: ");
 scanf("%d", &head);
-// Sort the request array
+  
 for (i = 0; i < n - 1; i++) {
 for (int j = i + 1; j < n; j++) {
 if (requests[i] > requests[j]) {
@@ -21,7 +21,7 @@ requests[j] = temp;
 }
 }
 }
-// C-LOOK algorithm
+
 for (i = 0; i < n && requests[i] < head; i++);
 for (; i < n; i++) {
 printf("Serviced request: %d\n", requests[i]);

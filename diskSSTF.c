@@ -8,7 +8,7 @@ int requests[n], completed[n];
 printf("Enter the request sequence: ");
 for (i = 0; i < n; i++) {
 scanf("%d", &requests[i]);
-completed[i] = 0; // Mark all requests as uncompleted initially
+completed[i] = 0; 
 }
 printf("Enter the initial head position: ");
 scanf("%d", &head);
@@ -19,7 +19,7 @@ min = abs(head - requests[j]);
 min_index = j;
 }
 }
-completed[min_index] = 1; // Mark the request as completed
+completed[min_index] = 1; 
 total_movement += abs(head - requests[min_index]);
 head = requests[min_index];
 printf("Serviced request: %d\n", head);

@@ -16,7 +16,7 @@ int disk_size;
 scanf("%d", &disk_size);
 printf("Enter the direction (1 for high, 0 for low): ");
 scanf("%d", &direction);
-// Sort the request array
+
 for (i = 0; i < n - 1; i++) {
 for (int j = i + 1; j < n; j++) {
 if (requests[i] > requests[j]) {
@@ -43,7 +43,7 @@ printf("Serviced request: %d\n", requests[i]);
 total_movement += abs(head - requests[i]);
 head = requests[i];
 }
-} else { // Move towards lower end
+} else { 
 for (i = n - 1; i >= 0 && requests[i] > head; i--);
 for (; i >= 0; i--) {
 printf("Serviced request: %d\n", requests[i]);

@@ -8,8 +8,8 @@ int n;
 printf("Enter the number of elements: ");
 scanf("%d", &n);
 char *args[n + 2];
-args[0] = "./2Bchild"; // Program to execute
-args[n + 1] = NULL; // Null terminate the arguments
+args[0] = "./2Bchild"; 
+args[n + 1] = NULL; 
 printf("Enter the elements of the array:\n");
 for (int i = 1; i <= n; i++) {
 args[i] = (char *)malloc(10 * sizeof(char));
@@ -20,11 +20,11 @@ if (pid < 0) {
 perror("Fork failed");
 exit(EXIT_FAILURE);
 }
-if (pid == 0) { // Child process
+if (pid == 0) { 
 execve(args[0], args, NULL);
 perror("Execve failed");
 exit(EXIT_FAILURE);
-} else { // Parent process
+} else { 
 wait(NULL);
 printf("Parent process: Child process has completed.\n");
 for (int i = 1; i <= n; i++) {
